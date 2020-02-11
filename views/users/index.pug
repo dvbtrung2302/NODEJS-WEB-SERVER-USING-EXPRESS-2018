@@ -6,7 +6,10 @@ form(action="/users/search", method="Get")
 
 ul
 	each user in users
-		li= user.name
+		li
+			span= user.name
+			span &nbsp;
+			a(href="/users/" + user.id) View
 script.
 	var input = document.getElementById('input');
 	input.addEventListener('change', function() {
