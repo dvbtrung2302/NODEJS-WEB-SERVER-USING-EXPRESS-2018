@@ -4,7 +4,8 @@ var app = express();
 var port = 3000;
 var users = [
 	{ id: 1, name: 'Trung'},
-	{ id: 2, name: 'Linh'}
+	{ id: 2, name: 'Linh'},
+	{ id: 3, name: 'Khang'}
 ];
 
 app.set('view engine', 'pug');
