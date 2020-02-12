@@ -1,18 +1,22 @@
-h1 USERS
-a(href="/users/create") New
-form(action="/users/search", method="Get")
-	input(type="text", name="q", id="input")
-	button Search
+extends ../layouts/common.pug
 
-ul
-	each user in users
-		li
-			span= user.name
-			span &nbsp;
-			a(href="/users/" + user.id) View
-script.
-	var input = document.getElementById('input');
-	input.addEventListener('change', function() {
-	sessionStorage.setItem('draft', input.value);
-	});
-	input.value = sessionStorage.getItem('draft');
+block content
+	h1 USERS
+	a(href="/users/create") New
+	form(action="/users/search", method="Get")
+		input(type="text", name="q", id="input")
+		button Search
+
+	ul
+		each user in users
+			li
+				span= user.name
+				span &nbsp;
+				a(href="/users/" + user.id) View
+block scripts
+	script.
+		var input = document.getElementById('input');
+		input.addEventListener('change', function() {
+		sessionStorage.setItem('draft', input.value);
+		});
+		input.value = sessionStorage.getItem('draft');
