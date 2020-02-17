@@ -1,22 +1,23 @@
 extends ../layouts/common.pug
 
 block content
-	h1 USERS
-	a(href="/users/create") New
-	form(action="/users/search", method="Get")
-		input(type="text", name="q", id="input")
-		button Search
+	h1 
+		span USERS 
+		a.btn.btn-primary(href="/users/create") New
+		form.ml-auto.mt-3(action="/users/search", method="Get" class="d-flex")
+			input(type="text", name="q", id="input" class="form-control mr-2")
+			button(class="btn btn-primary") Search
 
-	ul
+	table.table
+		tr
+			th Name
+			th Phone
+			th Action
 		each user in users
-			li
-				span= user.name
-				span &nbsp;
-				a(href="/users/" + user.id) View
+			tr
+				td= user.name
+				td= user.phone
+				td
+					a.btn.btn-light(href="/users/" + user.id) View
 block scripts
-	script.
-		var input = document.getElementById('input');
-		input.addEventListener('change', function() {
-		sessionStorage.setItem('draft', input.value);
-		});
-		input.value = sessionStorage.getItem('draft');
+	script(src="/scripts/input.js")

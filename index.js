@@ -19,7 +19,7 @@ app.get('/', function(req, res) {
 });
 
 app.use('/users', userRoute);
-
+app.use(express.static('public'));
 app.listen(port, function() {
 	console.log('Server listening on port ' + port);
 });

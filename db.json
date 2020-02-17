@@ -1,28 +1,19 @@
 {
   "users": [
     {
-      "name": "tung",
-      "id": "5YQwwy67"
+      "name": "trung",
+      "phone": "0",
+      "id": "sUZ7bjCn"
     },
     {
-      "name": "aaaa",
-      "id": "66vHzLGz"
+      "name": "linh",
+      "phone": "0767452180",
+      "id": "v7miVBdb"
     },
     {
-      "name": "hihi",
-      "id": "P1EOaHj6"
-    },
-    {
-      "name": "aaa",
-      "id": "ZfDF1daa"
-    },
-    {
-      "name": "aaa",
-      "id": "2rz45sth"
-    },
-    {
-      "name": "aaa",
-      "id": "EqZ6QYb8"
+      "name": "Nguyễn Văn Nghị",
+      "phone": "00000000000",
+      "id": "X7Hop3ol"
     }
   ]
 }
