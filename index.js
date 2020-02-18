@@ -15,7 +15,7 @@ app.set('views', './views');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
-app.use(cookieParser());
+app.use(cookieParser('asdsadsadsa12213xa'));
 
 app.get('/', function(req, res) {
 	res.render('index', {
